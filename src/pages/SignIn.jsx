@@ -2,7 +2,7 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { firebase, useAuthState } from "../DB/Firebase";
 
-export default async function SignIn() {
+export default function SignIn() {
   const auth = firebase.auth();
   const firestore = firebase.firestore();
   // const analytics = firebase.analytics();
@@ -55,7 +55,7 @@ export default async function SignIn() {
   return (
     <>
       <div className="Sign-In-Page">
-        <button className="btn-google" onClick={() => signInWithGoogle()}>
+        <button onClick={() => signInWithGoogle()} className="btn-google">
           <span className="Icon-Google">
             <FcGoogle />
           </span>
